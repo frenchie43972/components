@@ -22,6 +22,6 @@ function App() {
     ];
     
     return <Accordion items={items}/>
-  }
+}
 
   export default App;

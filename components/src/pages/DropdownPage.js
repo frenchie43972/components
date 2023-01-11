@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import Dropdown from '../components/Dropdown';
 
-function Dropdown() {
-    // A ne wpiece of state wher "selection" is the current selected option and
+function DropdownPage() {
+    // A new piece of state wher "selection" is the current selected option and
     // setSelection is the function that updates "selection"
     const [selection, setSelection] = useState(null);
 
@@ -25,4 +26,4 @@ function Dropdown() {
     ); 
 }
 
-  export default Dropdown;
+  export default DropdownPage;

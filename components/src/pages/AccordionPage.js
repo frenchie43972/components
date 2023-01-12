@@ -1,5 +1,5 @@
-import Button from "./components/Button";
 import Accordion from "../components/Accordion";
+import Button from '../components/Button';
 import { ImPacman, ImEvil2, ImPointRight } from "react-icons/im";
 
 function AccordionPage() {

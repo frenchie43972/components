@@ -3,7 +3,6 @@ import { ImPacman, ImEvil2, ImPointRight } from "react-icons/im";
 
 function ButtonPage() {
     const handleClick = () => {
-        console.log('Click');
     };
     return (
         

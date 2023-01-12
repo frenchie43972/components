@@ -16,7 +16,7 @@ function NavigationProvider({ children }) {
     };
 
     // Event listener for the 'popstate' event which is fired when the
-    // user navigates bak and forth in the browser
+    // user navigates back and forth in the browser
     window.addEventListener('popstate', handler);
 
     // Cleanup function that removes the event listener when the 
@@ -28,10 +28,17 @@ function NavigationProvider({ children }) {
     // run once on component mount and does no re-run on subsequent renders
   }, []);
 
+  // the function navigate uses history.pushState() to update the the browser
+  // session history but does not trigger a refresh an make it seem like a 
+  // different page
+  const navigate = (to) => {
+    window.history.pushState({}, '', to);
+    setCurrentPath(to);
+  };
+
   // The Provider component returns this with the value prop that grant the children
   // of the component access to the prop 'value'
-  return <NavigationContext.Provider value={{}}>
-    {currentPath}
+  return <NavigationContext.Provider value={{ currentPath, navigate}}>
     {children}
   </NavigationContext.Provider>
 }
